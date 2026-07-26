@@ -1,0 +1,98 @@
+import { Field } from "@/components/ui/Field";
+import { SectionLabel } from "@/components/ui/SectionLabel";
+import { EMAIL, PHONE, PHONE_HREF } from "@/data/content";
+import { Check, Clock, Mail, MapPin, Phone, Send } from "lucide-react";
+import { useState } from "react";
+
+export const Contact = () => {
+    const [sent, setSent] = useState(false);
+    return (
+        <section id="kontakt" className="py-28 md:py-40 bg-ink text-white">
+            <div className="container-x">
+                <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+                    <div className="lg:col-span-5">
+                        {/* <Reveal> */}
+                        <SectionLabel>Kontakt</SectionLabel>
+                        {/* </Reveal> */}
+                        {/* <Reveal delay={0.05}> */}
+                        <h2 className="mt-6 text-4xl md:text-6xl font-display font-semibold leading-[1.02]">
+                            Porozmawiajmy o Twoim projekcie.
+                        </h2>
+                        {/* </Reveal> */}
+                        {/* <Reveal delay={0.1}> */}
+                        <p className="mt-6 text-white/60 leading-relaxed max-w-md">
+                            Odbieramy telefony osobiście — bez sekretariatu i bez przekierowań. Odpowiadamy najczęściej w ciągu kilku godzin.
+                        </p>
+                        {/* </Reveal> */}
+
+                        {/* <Reveal delay={0.15}> */}
+                        <div className="mt-10 space-y-5">
+                            {[
+                                { i: Phone, l: "Telefon", v: PHONE, h: PHONE_HREF },
+                                { i: Mail, l: "E-mail", v: EMAIL, h: `mailto:${EMAIL}` },
+                                { i: MapPin, l: "Baza", v: "Dziurów, woj. świętokrzyskie" },
+                                { i: Clock, l: "Godziny", v: "Pon–Sob 7:00 – 19:00" },
+                            ].map(c => (
+                                <div key={c.l} className="flex items-start gap-4">
+                                    <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0">
+                                        <c.i className="w-4 h-4 text-yellow" strokeWidth={1.75} />
+                                    </div>
+                                    <div>
+                                        <p className="text-xs uppercase tracking-wider text-white/40">{c.l}</p>
+                                        {c.h ? (
+                                            <a href={c.h} className="text-lg text-white hover:text-yellow transition-colors">{c.v}</a>
+                                        ) : (
+                                            <p className="text-lg text-white">{c.v}</p>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        {/* </Reveal> */}
+
+                        {/* <Reveal delay={0.2}> */}
+                        <div className="mt-10 aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                            <iframe
+                                title="Mapa lokalizacji Hydro-Kop, Dziurów"
+                                src="https://www.openstreetmap.org/export/embed.html?bbox=21.07%2C51.09%2C21.13%2C51.13&layer=mapnik&marker=51.11%2C21.10"
+                                className="w-full h-full grayscale invert opacity-70"
+                                loading="lazy"
+                            />
+                        </div>
+                        {/* </Reveal> */}
+                    </div>
+
+                    {/* <Reveal delay={0.1} className="lg:col-span-7"> */}
+                    <form
+                        onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+                        className="p-8 md:p-10 rounded-3xl bg-ink-soft border border-white/10"
+                    >
+                        <h3 className="text-2xl font-display font-semibold">Bezpłatna wycena</h3>
+                        <p className="mt-2 text-sm text-white/50">Opisz zakres w kilku zdaniach — oddzwonimy z konkretami.</p>
+
+                        <div className="mt-8 grid sm:grid-cols-2 gap-4">
+                            <Field label="Imię i nazwisko" name="name" required />
+                            <Field label="Telefon" name="phone" type="tel" required />
+                            <Field label="E-mail" name="email" type="email" className="sm:col-span-2" />
+                            <Field label="Lokalizacja inwestycji" name="loc" className="sm:col-span-2" />
+                            <div className="sm:col-span-2">
+                                <label className="text-xs uppercase tracking-wider text-white/50">Zakres prac</label>
+                                <textarea rows={5} required
+                                    className="mt-2 w-full bg-transparent border-b border-white/20 focus:border-yellow focus:outline-none py-3 text-white resize-none" />
+                            </div>
+                        </div>
+
+                        <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                            <p className="text-xs text-white/40 max-w-sm">Wysyłając formularz zgadzasz się na kontakt telefoniczny lub e-mailowy w sprawie wyceny.</p>
+                            <button type="submit" disabled={sent} className="inline-flex items-center gap-3 bg-yellow text-ink px-7 py-4 rounded-full font-semibold hover:bg-yellow-deep transition-colors disabled:opacity-70">
+                                {sent ? <>Wysłano <Check className="w-5 h-5" /></> : <>Wyślij zapytanie <Send className="w-4 h-4" /></>}
+                            </button>
+                        </div>
+                    </form>
+                    {/* </Reveal> */}
+                </div>
+            </div>
+        </section>
+    );
+}
+
