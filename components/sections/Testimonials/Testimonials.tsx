@@ -1,10 +1,5 @@
 import { SectionLabel } from "@/components/ui/SectionLabel";
-
-const testis = [
-    { q: "Wykop pod fundament domu zrobili w dwa dni, tak jak się umawialiśmy. Wjechali sprzętem tam, gdzie inna firma odmawiała.", n: "Marek K.", r: "Inwestor prywatny, Starachowice" },
-    { q: "Podjazd z kostki granitowej wygląda dokładnie tak, jak chciałem. Widać, że chłopaki robią to codziennie i wiedzą, co robią.", n: "Anna P.", r: "Klientka indywidualna, Kielce" },
-    { q: "Rozbiórka stodoły z wywozem gruzu w jednym pakiecie. Zero mojego zaangażowania, tylko wskazałem co ma zniknąć.", n: "Tomasz L.", r: "Rolnik, powiat ostrowiecki" },
-];
+import { testis } from "@/data/content";
 
 export const Testimonials = () => {
     return (

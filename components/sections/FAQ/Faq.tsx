@@ -2,18 +2,7 @@
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
-
-const faqs = [
-    { q: "Ile kosztują roboty ziemne?", a: "Wycena zależy od kubatury, dojazdu i typu gruntu. Przyjeżdżamy na miejsce, mierzymy zakres i podajemy konkretną kwotę — bez zaskoczeń w trakcie." },
-    { q: "Czy wykonujecie wykopy pod fundamenty?", a: "Tak, to jedna z naszych podstawowych usług. Robimy wykopy pod ławy, płyty i piwnice, zgodnie z projektem i wytycznymi kierownika budowy." },
-    { q: "Na jakim terenie działacie?", a: "Głównie powiat starachowicki, kielecki, ostrowiecki, skarżyski oraz Kielce i okolice Radomia. Przy większych zleceniach dojeżdżamy dalej — pytaj." },
-    { q: "Czy zapewniacie transport materiałów?", a: "Tak. Dostarczamy kruszywa, piasek, ziemię ogrodową, a także wywozimy urobek i gruz z placu budowy." },
-    { q: "Jak szybko można rozpocząć prace?", a: "Najczęściej w ciągu 5–10 dni od potwierdzenia zlecenia. W sezonie warto rezerwować termin z kilkutygodniowym wyprzedzeniem." },
-    { q: "Czy wystawiacie fakturę VAT?", a: "Tak, pracujemy zarówno z klientami prywatnymi, jak i firmami. Wystawiamy standardową fakturę VAT." },
-    { q: "Czy sprzątacie po zakończonych pracach?", a: "Zawsze zostawiamy plac uporządkowany — bez pryzm ziemi, luźnego gruzu czy zapomnianego sprzętu." },
-    { q: "Czy podpisujecie umowę na wykonanie?", a: "Przy większych zleceniach — tak. Standardem jest pisemne potwierdzenie zakresu, ceny i terminu przed rozpoczęciem prac." },
-    { q: "Czy pracujecie zimą?", a: "Przy sprzyjających warunkach i niezamarzniętym gruncie — tak. Zimą realizujemy też wyburzenia i drobniejsze prace." },
-];
+import { faqs } from "@/data/content";
 
 export const Faq = () => {
     const [open, setOpen] = useState<number | null>(0);

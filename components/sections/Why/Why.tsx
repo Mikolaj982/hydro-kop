@@ -1,14 +1,6 @@
 import { SectionLabel } from "@/components/ui/SectionLabel";
-import { ArrowRight, Clock, Handshake, Sparkles, Users, Wallet, Wrench } from "lucide-react";
-
-const whys = [
-    { icon: Clock, t: "Terminowość", d: "Mówimy realne terminy i ich pilnujemy. Bez znikania z placu budowy." },
-    { icon: Users, t: "Doświadczenie", d: "Od 2019 roku pracujemy dla klientów prywatnych i wykonawców. Ponad 300 zakończonych prac." },
-    { icon: Wrench, t: "Nowoczesny park maszynowy", d: "Serwisowany sprzęt do 2020 roku — mniej przestojów, więcej wykopu w ciągu dnia." },
-    { icon: Handshake, t: "Kompleksowa realizacja", d: "Wykopy, wywóz, brukarstwo, przyłącza — wszystko z jedną firmą, jedną fakturą." },
-    { icon: Wallet, t: "Konkurencyjne ceny", d: "Wycena rozpisana pozycja po pozycji. Bez ukrytych kosztów pod koniec projektu." },
-    { icon: Sparkles, t: "Indywidualne podejście", d: "Wchodzimy w projekt, dopytujemy, podpowiadamy tańsze rozwiązania. Ty decydujesz." },
-];
+import { ArrowRight } from "lucide-react";
+import { whys } from "@/data/content";
 
 export const Why = () => {
     return (

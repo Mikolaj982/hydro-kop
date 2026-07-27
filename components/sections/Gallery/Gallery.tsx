@@ -1,18 +1,9 @@
 'use client'
 import { X } from "lucide-react";
-import p1 from '@/public/images/globe.svg';
 import { useState } from "react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import Image from "next/image";
-
-const gallery = [
-    { src: p1, alt: "Wykop pod fundamenty domu jednorodzinnego", tall: true },
-    { src: p1, alt: "Podjazd z kostki granitowej" },
-    { src: p1, alt: "Wykop pod przyłącze wod-kan minikoparką" },
-    { src: p1, alt: "Wyburzenie starego budynku" },
-    { src: p1, alt: "Wyrównanie i utwardzenie terenu" },
-    { src: p1, alt: "Wykop pod oczko wodne w ogrodzie" },
-];
+import { gallery } from "@/data/content";
 
 export const Gallery = () => {
     const [lb, setLb] = useState<number | null>(null);

@@ -1,12 +1,5 @@
 import { SectionLabel } from "@/components/ui/SectionLabel";
-
-const steps = [
-  { n: "01", t: "Kontakt", d: "Dzwonisz lub piszesz — opowiadasz o zakresie." },
-  { n: "02", t: "Bezpłatna wycena", d: "Przyjeżdżamy na miejsce i podajemy konkretną cenę." },
-  { n: "03", t: "Ustalamy termin", d: "Rezerwujemy sprzęt i wpisujemy Cię w grafik." },
-  { n: "04", t: "Wykonanie prac", d: "Pracujemy sprawnie, informujemy o postępach." },
-  { n: "05", t: "Odbiór", d: "Zamiatamy po sobie i oddajemy gotowy plac." },
-];
+import { steps } from "@/data/content";
 
 export const Process = () => {
   return (

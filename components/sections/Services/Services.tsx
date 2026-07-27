@@ -1,14 +1,6 @@
 import { SectionLabel } from "@/components/ui/SectionLabel";
-import { ArrowUpRight, Grid3x3, Hammer, Package, PickaxeIcon, Truck, Waves } from "lucide-react";
-
-const services = [
-    { icon: PickaxeIcon, title: "Roboty ziemne", desc: "Kompleksowe prace ziemne, niwelacje i przygotowanie działek pod inwestycje." },
-    { icon: Hammer, title: "Wyburzenia i rozbiórki", desc: "Rozbiórka budynków gospodarczych, stodół i obiektów murowanych z wywozem gruzu." },
-    { icon: Grid3x3, title: "Wykopy pod fundamenty", desc: "Precyzyjne wykopy pod ławy, płyty i piwnice — zgodnie z projektem." },
-    { icon: Waves, title: "Przyłącza wod-kan", desc: "Wykopy pod wodę, kanalizację, drenaże i szamba. Rzetelnie i szczelnie." },
-    { icon: Package, title: "Brukarstwo", desc: "Podjazdy, tarasy i alejki z kostki brukowej oraz granitowej." },
-    { icon: Truck, title: "Transport materiałów", desc: "Dostawa kruszyw, piasku, ziemi oraz wywóz gruzu i urobku." },
-];
+import { ArrowUpRight } from "lucide-react";
+import { services } from "@/data/content";
 
 export const Services = () => {
     return (
