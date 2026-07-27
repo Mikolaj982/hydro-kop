@@ -18,7 +18,7 @@ const Nav = () => {
       <div className="container-x flex items-center justify-between h-20">
         <a href="#top" className="flex items-center gap-2.5">
           <Image
-            src={'images/globe.svg'}
+            src={'/images/globe.svg'}
             alt="Hydro-Kop logo"
             priority
             className="h-10 w-10"

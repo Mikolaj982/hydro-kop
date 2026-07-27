@@ -1,11 +1,34 @@
+'use client'
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { contactFormSchema, type ContactFormValues } from "@/lib/validations/contact";
+import { sendContactForm } from "@/app/actions/contact/sendContactForm";
 import { Field } from "@/components/ui/Field";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { EMAIL, PHONE, PHONE_HREF } from "@/data/content";
-import { Check, Clock, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Clock, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 
 export const Contact = () => {
-    const [sent, setSent] = useState(false);
+    const {
+        register,
+        handleSubmit,
+        formState: { errors, isSubmitting },
+        reset,
+    } = useForm<ContactFormValues>({ resolver: zodResolver(contactFormSchema) });
+
+    const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+    const onSubmit = async (data: ContactFormValues) => {
+        const result = await sendContactForm(data);
+        if (result.success) {
+            setStatus("success");
+            reset();
+        } else {
+            setStatus("error");
+        }
+    };
+
     return (
         <section id="kontakt" className="py-28 md:py-40 bg-ink text-white">
             <div className="container-x">
@@ -63,32 +86,62 @@ export const Contact = () => {
                     </div>
 
                     {/* <Reveal delay={0.1} className="lg:col-span-7"> */}
-                    <form
-                        onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-                        className="p-8 md:p-10 rounded-3xl bg-ink-soft border border-white/10"
-                    >
-                        <h3 className="text-2xl font-display font-semibold">Bezpłatna wycena</h3>
-                        <p className="mt-2 text-sm text-white/50">Opisz zakres w kilku zdaniach — oddzwonimy z konkretami.</p>
+                    <div className="lg:col-span-7">
+                        <form
+                            noValidate
+                            onSubmit={handleSubmit(onSubmit)}
+                            className="p-8 md:p-10 rounded-3xl bg-ink-soft border border-white/10"
+                        >
+                            <h3 className="text-2xl font-display font-semibold">Bezpłatna wycena</h3>
+                            <p className="mt-2 text-sm text-white/50">
+                                Opisz zakres w kilku zdaniach — oddzwonimy z konkretami.
+                            </p>
 
-                        <div className="mt-8 grid sm:grid-cols-2 gap-4">
-                            <Field label="Imię i nazwisko" name="name" required />
-                            <Field label="Telefon" name="phone" type="tel" required />
-                            <Field label="E-mail" name="email" type="email" className="sm:col-span-2" />
-                            <Field label="Lokalizacja inwestycji" name="loc" className="sm:col-span-2" />
-                            <div className="sm:col-span-2">
-                                <label className="text-xs uppercase tracking-wider text-white/50">Zakres prac</label>
-                                <textarea rows={5} required
-                                    className="mt-2 w-full bg-transparent border-b border-white/20 focus:border-yellow focus:outline-none py-3 text-white resize-none" />
+                            <div className="mt-8 grid sm:grid-cols-2 gap-4">
+                                <Field label="Imię i nazwisko" required {...register("name")} error={errors.name?.message} />
+                                <Field label="Telefon" type="tel" required {...register("phone")} error={errors.phone?.message} />
+                                <Field label="E-mail" type="email" className="sm:col-span-2" {...register("email")} error={errors.email?.message} />
+                                <Field label="Lokalizacja inwestycji" className="sm:col-span-2" {...register("loc")} />
+                                <div className="sm:col-span-2">
+                                    <label className="text-xs uppercase tracking-wider text-white/50">Zakres prac</label>
+                                    <textarea
+                                        rows={5}
+                                        {...register("message")}
+                                        className="mt-2 w-full bg-transparent border-b border-white/20 focus:border-yellow focus:outline-none py-3 text-white resize-none"
+                                    />
+                                    {errors.message && <p className="mt-1 text-xs text-red-400">{errors.message.message}</p>}
+                                </div>
+
+                                <input
+                                    {...register("website")}
+                                    tabIndex={-1}
+                                    autoComplete="off"
+                                    className="absolute -left-[9999px]"
+                                />
+
+                                <div className="sm:col-span-2">
+                                    <label className="flex items-start gap-2 text-xs text-white/60">
+                                        <input type="checkbox" {...register("consent")} className="mt-0.5" />
+                                        Zgadzam się na przetwarzanie danych osobowych w celu kontaktu i przygotowania wyceny.
+                                    </label>
+                                    {errors.consent && <p className="mt-1 text-xs text-red-400">{errors.consent.message}</p>}
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                            <p className="text-xs text-white/40 max-w-sm">Wysyłając formularz zgadzasz się na kontakt telefoniczny lub e-mailowy w sprawie wyceny.</p>
-                            <button type="submit" disabled={sent} className="inline-flex items-center gap-3 bg-yellow text-ink px-7 py-4 rounded-full font-semibold hover:bg-yellow-deep transition-colors disabled:opacity-70">
-                                {sent ? <>Wysłano <Check className="w-5 h-5" /></> : <>Wyślij zapytanie <Send className="w-4 h-4" /></>}
-                            </button>
-                        </div>
-                    </form>
+                            <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                                <p className="text-xs text-white/40 max-w-sm">
+                                    Pola oznaczone jako wymagane muszą zostać wypełnione, aby wysłać zapytanie.
+                                </p>
+                                <button
+                                    type="submit"
+                                    disabled={isSubmitting}
+                                    className="inline-flex items-center gap-3 bg-yellow text-ink px-7 py-4 rounded-full font-semibold hover:bg-yellow-deep transition-colors disabled:opacity-70"
+                                >
+                                    {isSubmitting ? "Wysyłanie..." : <>Wyślij zapytanie <Send className="w-4 h-4" /></>}
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                     {/* </Reveal> */}
                 </div>
             </div>

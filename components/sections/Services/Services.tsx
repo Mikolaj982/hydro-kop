@@ -37,6 +37,7 @@ export const Services = () => {
                         // <Reveal key={s.title} delay={i * 0.05}>
                         //   <motion.a
                         <a
+                            key={i}
                             href="#kontakt"
                             // whileHover={{ y: -4 }}
                             className="group relative block h-full p-8 rounded-3xl border border-border bg-card overflow-hidden transition-colors hover:border-ink"
