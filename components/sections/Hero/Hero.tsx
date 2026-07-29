@@ -1,7 +1,7 @@
 'use client'
 import { useRef } from 'react';
 import { PHONE_HREF } from '@/data/content';
-import { ArrowUpRight, Phone } from 'lucide-react';
+import { ArrowUpRight, Check, Phone } from 'lucide-react';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import Image from 'next/image';
 
@@ -16,7 +16,7 @@ export const Hero = () => {
             <div>
                 {/* <img src={heroImg} alt="Koparka Hydro-Kop podczas prac ziemnych" className="w-full h-[120%] object-cover opacity-55" width={1920} height={1280} /> */}
                 <Image
-                    src={'/images/globe.svg'}
+                    src={'/images/hero.webp'}
                     alt="Koparka Hydro-Kop podczas prac ziemnych"
                     priority
                     className="w-full h-[120%] object-cover opacity-55"
@@ -63,7 +63,7 @@ export const Hero = () => {
                     {["Terminowe realizacje", "Nowoczesny sprzęt", "Kompleksowa obsługa", "Wycena w 24h"].map(t => (
                         <div key={t} className="flex items-center gap-2.5">
                             <div className="w-6 h-6 rounded-full bg-yellow/15 flex items-center justify-center">
-                                {/* <Check className="w-3.5 h-3.5 text-yellow" strokeWidth={3} /> */}
+                                <Check className="w-3.5 h-3.5 text-yellow" strokeWidth={3} />
                             </div>
                             {t}
                         </div>

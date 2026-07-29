@@ -1,5 +1,5 @@
 import { SectionLabel } from "@/components/ui/SectionLabel"
-import eqMini from '@/public/images/globe.svg'
+import realizacje1 from "@/public/images/realizacje1.webp"
 import { Hammer, Shield, Sparkles, Wrench } from "lucide-react";
 import Image from "next/image";
 
@@ -19,17 +19,19 @@ export const Equipment = () => {
                         </h2>
                         {/* </Reveal> */}
                     </div>
-                    {/* <Reveal delay={0.1} className="lg:col-span-5"> */}
-                    <p className="text-white/60 leading-relaxed">
-                        Regularnie serwisowane maszyny minimalizują przestoje na budowie. Do wąskich przejazdów mamy minikoparki, do dużych zleceń — sprzęt gąsienicowy i wywrotki. Wybieramy maszynę pod zakres, nie odwrotnie.
-                    </p>
-                    {/* </Reveal> */}
+                    <div className="lg:col-span-5">
+                        {/* <Reveal delay={0.1} className="lg:col-span-5"> */}
+                        <p className="text-white/60 leading-relaxed">
+                            Regularnie serwisowane maszyny minimalizują przestoje na budowie. Do wąskich przejazdów mamy minikoparki, do dużych zleceń — sprzęt gąsienicowy i wywrotki. Wybieramy maszynę pod zakres, nie odwrotnie.
+                        </p>
+                        {/* </Reveal> */}
+                    </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
-                    {[
-                        { img: eqMini, name: "Minikoparka", specs: ["Szerokość od 90 cm", "Wąskie przejazdy", "Precyzyjne wykopy"] },
-                        { img: eqMini, name: "Wywrotka i transport", specs: ["Wywóz ziemi i gruzu", "Dostawa kruszyw", "Ładowność do 15 t"] },
+                    {/* {[
+                        { img: realizacje1, name: "Minikoparka", specs: ["Szerokość od 90 cm", "Wąskie przejazdy", "Precyzyjne wykopy"] },
+                        { img: realizacje1, name: "Wywrotka i transport", specs: ["Wywóz ziemi i gruzu", "Dostawa kruszyw", "Ładowność do 15 t"] },
                     ].map((e, i) => (
                         // <Reveal key={e.name} delay={i * 0.1}>
                         <div key={e.name} className="group rounded-3xl overflow-hidden bg-ink-soft border border-white/5">
@@ -44,7 +46,7 @@ export const Equipment = () => {
                             </div>
                         </div>
                         // {/* </Reveal> */}
-                    ))}
+                    {/* ))} */}
                 </div>
 
                 {/* <Reveal delay={0.2}> */}

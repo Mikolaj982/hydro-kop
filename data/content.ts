@@ -1,5 +1,13 @@
 import { Clock, Grid3x3, Hammer, Handshake, Package, PickaxeIcon, Sparkles, Truck, Users, Wallet, Waves, Wrench } from "lucide-react";
-import p1 from '@/public/images/globe.svg';
+import realizacje1 from "@/public/images/realizacje1.webp";
+import realizacje2 from "@/public/images/realizacje2.webp";
+import realizacje3 from "@/public/images/realizacje3.webp";
+import realizacje4 from "@/public/images/realizacje4.jpg";
+import realizacje5 from "@/public/images/realizacje5.jpg";
+import realizacje6 from "@/public/images/realizacje6.jpg";
+import realizacje7 from "@/public/images/realizacje7.jpg";
+import realizacje8 from "@/public/images/realizacje8.jpg";
+import realizacje9 from "@/public/images/realizacje9.jpg";
 
 export const PHONE = "+48 600 000 000";
 export const PHONE_HREF = "tel:+48600000000";
@@ -33,12 +41,15 @@ export const faqs = [
     { q: "Czy pracujecie zimą?", a: "Przy sprzyjających warunkach i niezamarzniętym gruncie — tak. Zimą realizujemy też wyburzenia i drobniejsze prace." },
 ];
 export const gallery = [
-    { src: p1, alt: "Wykop pod fundamenty domu jednorodzinnego", tall: true },
-    { src: p1, alt: "Podjazd z kostki granitowej" },
-    { src: p1, alt: "Wykop pod przyłącze wod-kan minikoparką" },
-    { src: p1, alt: "Wyburzenie starego budynku" },
-    { src: p1, alt: "Wyrównanie i utwardzenie terenu" },
-    { src: p1, alt: "Wykop pod oczko wodne w ogrodzie" },
+    { src: realizacje1, alt: "Wykop pod fundamenty domu jednorodzinnego", tall: true },
+    { src: realizacje2, alt: "Podjazd z kostki granitowej" },
+    { src: realizacje3, alt: "Wykop pod przyłącze wod-kan minikoparką" },
+    { src: realizacje4, alt: "Wyburzenie starego budynku" },
+    { src: realizacje5, alt: "Wyrównanie i utwardzenie terenu" },
+    { src: realizacje6, alt: "Wykop pod oczko wodne w ogrodzie" },
+    { src: realizacje7, alt: "Wykop pod oczko wodne w ogrodzie" },
+    { src: realizacje8, alt: "Wykop pod oczko wodne w ogrodzie" },
+    { src: realizacje9, alt: "Wykop pod oczko wodne w ogrodzie" },
 ];
 export const steps = [
     { n: "01", t: "Kontakt", d: "Dzwonisz lub piszesz — opowiadasz o zakresie." },
