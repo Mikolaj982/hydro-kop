@@ -3,20 +3,10 @@ import { Figtree, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SITE_URL } from "@/data/content";
-import Nav from "@/components/layout/Nav/Nav";
-import { Footer } from "@/components/layout/Footer/Footer";
+import { Toaster } from "sonner";
 
 const figtree = Figtree({ subsets: ["latin", "latin-ext"], variable: "--font-sans" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin", "latin-ext"], variable: "--font-display" });
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -117,9 +107,8 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", "font-sans", figtree.variable, spaceGrotesk.variable)}
     >
       <body className="min-h-full flex flex-col">
-        <Nav />
         {children}
-        <Footer />
+        <Toaster richColors />
       </body>
     </html>
   );

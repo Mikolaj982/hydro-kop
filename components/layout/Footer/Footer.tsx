@@ -1,6 +1,7 @@
 import { EMAIL, PHONE, PHONE_HREF } from "@/data/content";
 import Image from "next/image";
 import logoMark from '@/public/images/globe.svg';
+import Link from "next/link";
 
 export const Footer = () => (
     <footer className="bg-ink text-white/60 border-t border-white/5">
@@ -29,6 +30,19 @@ export const Footer = () => (
                     <li><a href={`mailto:${EMAIL}`} className="hover:text-yellow">{EMAIL}</a></li>
                     <li>Dziurów, świętokrzyskie</li>
                     <li>Pon–Sob 7:00 – 19:00</li>
+                </ul>
+            </div>
+            <div>
+                <p className="text-white text-sm font-semibold mb-4">Informacje</p>
+                <ul className="space-y-2 text-sm">
+                    <li>
+                        <Link
+                            href="/polityka-prywatnosci"
+                            className="hover:text-yellow transition-colors"
+                        >
+                            Polityka prywatności
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </div>

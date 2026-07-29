@@ -7,7 +7,8 @@ import { Field } from "@/components/ui/Field";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { EMAIL, PHONE, PHONE_HREF } from "@/data/content";
 import { Clock, Mail, MapPin, Phone, Send } from "lucide-react";
-import { useState } from "react";
+import { toast } from "sonner";
+import Link from "next/link";
 
 export const Contact = () => {
     const {
@@ -17,15 +18,14 @@ export const Contact = () => {
         reset,
     } = useForm<ContactFormValues>({ resolver: zodResolver(contactFormSchema) });
 
-    const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
     const onSubmit = async (data: ContactFormValues) => {
         const result = await sendContactForm(data);
         if (result.success) {
-            setStatus("success");
+            toast.success("Wiadomość została wysłana");
             reset();
         } else {
-            setStatus("error");
+            toast.error("Nie udało się wysłać wiadomości");
         }
     };
 
@@ -122,7 +122,18 @@ export const Contact = () => {
                                 <div className="sm:col-span-2">
                                     <label className="flex items-start gap-2 text-xs text-white/60">
                                         <input type="checkbox" {...register("consent")} className="mt-0.5" />
-                                        Zgadzam się na przetwarzanie danych osobowych w celu kontaktu i przygotowania wyceny.
+                                        <span>
+                                            Zapoznałem(-am) się z{" "}
+                                            <Link
+                                                href="/polityka-prywatnosci"
+                                                target="_blank"
+                                                className="underline hover:text-yellow"
+                                            >
+                                                Polityką Prywatności
+                                            </Link>{" "}
+                                            i wyrażam zgodę na przetwarzanie moich danych osobowych w celu udzielenia
+                                            odpowiedzi na przesłane zapytanie oraz przygotowania wyceny.
+                                        </span>
                                     </label>
                                     {errors.consent && <p className="mt-1 text-xs text-red-400">{errors.consent.message}</p>}
                                 </div>
