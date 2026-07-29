@@ -1,6 +1,6 @@
 import { EMAIL, PHONE, PHONE_HREF } from "@/data/content";
 import Image from "next/image";
-import logoMark from '@/public/images/globe.svg';
+import logoMark from '@/public/images/logoHK.png';
 import Link from "next/link";
 
 export const Footer = () => (

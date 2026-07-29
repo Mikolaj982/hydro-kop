@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { PHONE_HREF, PHONE, links } from '@/data/content';
 import { ArrowRight, Menu, Phone, X } from 'lucide-react';
 import Image from 'next/image';
+import { AnimatePresence, motion } from 'motion/react';
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
@@ -44,21 +45,20 @@ const Nav = () => {
           {open ? <X /> : <Menu />}
         </button>
       </div>
-      {/* <AnimatePresence> */}
-      {open && (
-        // <motion.div initial={{ height: 0 }} animate={{ height: "auto" }} exit={{ height: 0 }}
-        <div className="lg:hidden overflow-hidden bg-ink border-t border-white/5">
-          <div className="container-x py-6 flex flex-col gap-4">
-            {links.map(([l, h]) => (
-              <a key={h} href={h} onClick={() => setOpen(false)} className="text-white/80 py-1">{l}</a>
-            ))}
-            <a href={PHONE_HREF} className="text-yellow font-medium">{PHONE}</a>
-            <a href="#kontakt" onClick={() => setOpen(false)} className="bg-yellow text-ink text-center py-3 rounded-full font-semibold">Darmowa wycena</a>
-          </div>
-          {/* </motion.div> */}
-        </div>
-      )}
-      {/* </AnimatePresence> */}
+      <AnimatePresence>
+        {open && (
+          <motion.div initial={{ height: 0 }} animate={{ height: "auto" }} exit={{ height: 0 }}
+            className="lg:hidden overflow-hidden bg-ink border-t border-white/5">
+            <div className="container-x py-6 flex flex-col gap-4">
+              {links.map(([l, h]) => (
+                <a key={h} href={h} onClick={() => setOpen(false)} className="text-white/80 py-1">{l}</a>
+              ))}
+              <a href={PHONE_HREF} className="text-yellow font-medium">{PHONE}</a>
+              <a href="#kontakt" onClick={() => setOpen(false)} className="bg-yellow text-ink text-center py-3 rounded-full font-semibold">Darmowa wycena</a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
