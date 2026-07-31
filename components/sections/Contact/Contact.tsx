@@ -78,7 +78,7 @@ export const Contact = () => {
                             <div className="mt-10 aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-white/5">
                                 <iframe
                                     title="Mapa lokalizacji Hydro-Kop, Dziurów"
-                                    src="https://www.openstreetmap.org/export/embed.html?bbox=21.07%2C51.09%2C21.13%2C51.13&layer=mapnik&marker=51.11%2C21.10"
+                                    src="https://www.openstreetmap.org/export/embed.html?bbox=20.914548251524824%2C50.93506570965036%2C21.32928213824357%2C51.091232625690104&amp;layer=mapnik&amp;marker=51.01321490327826%2C21.121915194884195"
                                     className="w-full h-full grayscale invert opacity-70"
                                     loading="lazy"
                                 />
