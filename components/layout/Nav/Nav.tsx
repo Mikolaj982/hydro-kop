@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { PHONE_HREF, PHONE, links } from '@/data/content';
+import { contactParts, links } from '@/data/content';
 import { ArrowRight, Menu, Phone, X } from 'lucide-react';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'motion/react';
@@ -8,6 +8,9 @@ import { AnimatePresence, motion } from 'motion/react';
 const Nav = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const phone = contactParts.phoneParts.join(" ");
+  const phoneHref = contactParts.phoneParts.join("");
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
@@ -34,8 +37,8 @@ const Nav = () => {
           ))}
         </nav>
         <div className="hidden lg:flex items-center gap-3">
-          <a href={PHONE_HREF} className="text-sm text-white/90 font-medium hover:text-yellow transition-colors flex items-center gap-2">
-            <Phone className="w-4 h-4" /> {PHONE}
+          <a href={phoneHref} className="text-sm text-white/90 font-medium hover:text-yellow transition-colors flex items-center gap-2">
+            <Phone className="w-4 h-4" /> {phone}
           </a>
           <a href="#kontakt" className="ml-2 inline-flex items-center gap-2 bg-yellow text-ink px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-yellow-deep transition-colors">
             Darmowa wycena <ArrowRight className="w-4 h-4" />
@@ -53,7 +56,7 @@ const Nav = () => {
               {links.map(([l, h]) => (
                 <a key={h} href={h} onClick={() => setOpen(false)} className="text-white/80 py-1">{l}</a>
               ))}
-              <a href={PHONE_HREF} className="text-yellow font-medium">{PHONE}</a>
+              <a href={phoneHref} className="text-yellow font-medium">{phone}</a>
               <a href="#kontakt" onClick={() => setOpen(false)} className="bg-yellow text-ink text-center py-3 rounded-full font-semibold">Darmowa wycena</a>
             </div>
           </motion.div>

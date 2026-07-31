@@ -1,4 +1,9 @@
+import { contactParts } from "@/data/content";
+
 export const PrivacyPolicy = () => {
+  const email = `${contactParts.emailUser}@${contactParts.emailDomain}`;
+  const phone = contactParts.phoneParts.join("");
+
   return (
     <section className="mx-auto max-w-4xl px-6 py-20">
       <div className="prose prose-neutral max-w-none">
@@ -21,9 +26,9 @@ export const PrivacyPolicy = () => {
           <br />
           NIP: 6642141828
           <br />
-          E-mail: email
+          E-mail: {email}
           <br />
-          Telefon: +4800000000
+          Telefon: {phone}
         </p>
 
         <p>

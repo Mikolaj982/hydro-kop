@@ -1,9 +1,12 @@
 'use client'
 import { Reveal } from "@/components/animations/Reveal";
-import { PHONE, PHONE_HREF } from "@/data/content"
+import { contactParts } from "@/data/content"
 import { ArrowRight, Phone } from "lucide-react"
 
 export const CtaBanner = () => {
+    const phone = contactParts.phoneParts.join(" ");
+    const phoneHref = contactParts.phoneParts.join("");
+
     return (
         <section className="py-16 bg-yellow">
             <div className="container-x flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
@@ -14,8 +17,8 @@ export const CtaBanner = () => {
                 </Reveal>
                 <Reveal delay={0.1}>
                     <div className="flex flex-wrap gap-3">
-                        <a href={PHONE_HREF} className="inline-flex items-center gap-3 bg-ink text-white px-7 py-4 rounded-full font-semibold hover:bg-ink-soft transition-colors">
-                            <Phone className="w-5 h-5" /> {PHONE}
+                        <a href={phoneHref} className="inline-flex items-center gap-3 bg-ink text-white px-7 py-4 rounded-full font-semibold hover:bg-ink-soft transition-colors">
+                            <Phone className="w-5 h-5" /> {phone}
                         </a>
                         <a href="#kontakt" className="inline-flex items-center gap-3 bg-white text-ink px-7 py-4 rounded-full font-semibold hover:bg-cream transition-colors">
                             Formularz <ArrowRight className="w-5 h-5" />

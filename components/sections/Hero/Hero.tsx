@@ -1,6 +1,6 @@
 'use client'
 import { useRef } from 'react';
-import { PHONE_HREF } from '@/data/content';
+import { contactParts } from '@/data/content';
 import { ArrowUpRight, Check, Phone } from 'lucide-react';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import Image from 'next/image';
@@ -11,18 +11,16 @@ export const Hero = () => {
     const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
     const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
+    const phone = contactParts.phoneParts.join(" ");
 
     return (
         <section id="top" ref={ref} className="relative min-h-screen w-full overflow-hidden bg-ink text-white">
             <motion.div style={{ y }} className="absolute inset-0">
-                {/* <img src={heroImg} alt="Koparka Hydro-Kop podczas prac ziemnych" className="w-full h-[120%] object-cover opacity-55" width={1920} height={1280} /> */}
                 <Image
                     src={'/images/hero.webp'}
                     alt="Koparka Hydro-Kop podczas prac ziemnych"
                     priority
                     className="w-full h-[120%] object-cover opacity-55"
-                    // width={1920}
-                    // height={1280}
                     fill
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/40" />
@@ -43,12 +41,12 @@ export const Hero = () => {
                     </Reveal>
                     <Reveal delay={0.2}>
                         <p className="mt-8 text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
-                            Od 2019 roku wykonujemy wykopy pod fundamenty, przyłącza wod-kan, wyburzenia i brukarstwo w regionie starachowickim, kieleckim i ostrowieckim. Bez wymówek i bez przekładania terminów.
+                            Od 2019 roku wykonujemy pełen zakres prac ziemnych: przyłącza wod-kan i gazowe, wykopy pod fundamenty, wyburzenia, korytowanie, utwardzanie terenu oraz roboty drogowe i brukarskie. Obsługujemy region starachowicki, kielecki i ostrowiecki — solidnie i terminowo, bez wymówek.
                         </p>
                     </Reveal>
                     <Reveal delay={0.3}>
                         <div className="mt-10 flex flex-wrap gap-3">
-                            <a href={PHONE_HREF} className="group inline-flex items-center gap-3 bg-yellow text-ink px-7 py-4 rounded-full font-semibold hover:bg-yellow-deep transition-all">
+                            <a href={phone} className="group inline-flex items-center gap-3 bg-yellow text-ink px-7 py-4 rounded-full font-semibold hover:bg-yellow-deep transition-all">
                                 <Phone className="w-5 h-5" /> Zadzwoń teraz
                             </a>
                             <a href="#kontakt" className="group inline-flex items-center gap-3 border border-white/20 text-white px-7 py-4 rounded-full font-semibold hover:bg-white hover:text-ink transition-all">

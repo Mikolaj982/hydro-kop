@@ -14,7 +14,7 @@ export const Equipment = () => {
                 <div className="grid lg:grid-cols-12 gap-12 items-end mb-16">
                     <div className="lg:col-span-7">
                         <Reveal>
-                            <SectionLabel>Park maszynowy</SectionLabel>
+                            <SectionLabel>Maszyny</SectionLabel>
                         </Reveal>
                         <Reveal delay={0.05}>
                             <h2 className="mt-6 text-4xl md:text-6xl font-display font-semibold leading-[1.02]">
@@ -36,9 +36,6 @@ export const Equipment = () => {
                     ].map((e, i) => (
                         <Reveal key={e.name} delay={i * 0.1}>
                             <div className="group rounded-3xl overflow-hidden bg-ink-soft border border-white/5">
-                                {/* <div className="aspect-4/3 overflow-hidden bg-black">
-                                    <Image src={e.img} alt={e.name} className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" fill />
-                                </div> */}
                                 <div className="relative aspect-[4/3] overflow-hidden rounded-t-3xl">
                                     <Image
                                         src={e.img}
@@ -65,7 +62,7 @@ export const Equipment = () => {
                             { icon: Wrench, t: "Zagęszczarki i płyty wibracyjne" },
                             { icon: Hammer, t: "Młot hydrauliczny" },
                             { icon: Shield, t: "Regularne przeglądy" },
-                            { icon: Sparkles, t: "Sprzęt do 2020 r." },
+                            { icon: Sparkles, t: "Wywóz" },
                         ].map(it => (
                             <div key={it.t} className="p-6 rounded-2xl border border-white/10 flex items-start gap-4">
                                 <it.icon className="w-5 h-5 text-yellow shrink-0 mt-0.5" strokeWidth={1.75} />

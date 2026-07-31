@@ -9,9 +9,11 @@ import realizacje7 from "@/public/images/realizacje7.jpg";
 import realizacje8 from "@/public/images/realizacje8.jpg";
 import realizacje9 from "@/public/images/realizacje9.jpg";
 
-export const PHONE = "+48 600 000 000";
-export const PHONE_HREF = "tel:+48600000000";
-export const EMAIL = "biuro@hydro-kop.pl";
+export const contactParts = {
+    emailUser: "h.goszczynski",
+    emailDomain: "interia.pl",
+    phoneParts: ["+48", "534", "957", "028"]
+};
 export const links = [
     ["Usługi", "#uslugi"],
     ["Sprzęt", "#sprzet"],
@@ -24,35 +26,35 @@ export const SITE_URL = "https://example.com";
 export const services = [
     { icon: PickaxeIcon, title: "Roboty ziemne", desc: "Kompleksowe prace ziemne, niwelacje i przygotowanie działek pod inwestycje." },
     { icon: Hammer, title: "Wyburzenia i rozbiórki", desc: "Rozbiórka budynków gospodarczych, stodół i obiektów murowanych z wywozem gruzu." },
-    { icon: Grid3x3, title: "Wykopy pod fundamenty", desc: "Precyzyjne wykopy pod ławy, płyty i piwnice — zgodnie z projektem." },
-    { icon: Waves, title: "Przyłącza wod-kan", desc: "Wykopy pod wodę, kanalizację, drenaże i szamba. Rzetelnie i szczelnie." },
+    { icon: Grid3x3, title: "Wykopy pod fundamenty", desc: "Precyzyjne wykopy pod ławy, płyty i piwnice - zgodnie z projektem." },
+    { icon: Waves, title: "Przyłącza wod-kan, gaz", desc: "Wykopy pod wodę, kanalizację, drenaże i szamba. Rzetelnie i szczelnie." },
     { icon: Package, title: "Brukarstwo", desc: "Podjazdy, tarasy i alejki z kostki brukowej oraz granitowej." },
     { icon: Truck, title: "Transport materiałów", desc: "Dostawa kruszyw, piasku, ziemi oraz wywóz gruzu i urobku." },
 ];
 export const faqs = [
-    { q: "Ile kosztują roboty ziemne?", a: "Wycena zależy od kubatury, dojazdu i typu gruntu. Przyjeżdżamy na miejsce, mierzymy zakres i podajemy konkretną kwotę — bez zaskoczeń w trakcie." },
+    { q: "Ile kosztują roboty ziemne?", a: "Wycena zależy od kubatury, dojazdu i typu gruntu. Przyjeżdżamy na miejsce, mierzymy zakres i podajemy konkretną kwotę - bez zaskoczeń w trakcie." },
     { q: "Czy wykonujecie wykopy pod fundamenty?", a: "Tak, to jedna z naszych podstawowych usług. Robimy wykopy pod ławy, płyty i piwnice, zgodnie z projektem i wytycznymi kierownika budowy." },
-    { q: "Na jakim terenie działacie?", a: "Głównie powiat starachowicki, kielecki, ostrowiecki, skarżyski oraz Kielce i okolice Radomia. Przy większych zleceniach dojeżdżamy dalej — pytaj." },
+    { q: "Na jakim terenie działacie?", a: "Głównie powiat starachowicki, kielecki, ostrowiecki, skarżyski oraz Kielce i okolice Radomia. Przy większych zleceniach dojeżdżamy dalej - pytaj." },
     { q: "Czy zapewniacie transport materiałów?", a: "Tak. Dostarczamy kruszywa, piasek, ziemię ogrodową, a także wywozimy urobek i gruz z placu budowy." },
     { q: "Jak szybko można rozpocząć prace?", a: "Najczęściej w ciągu 5–10 dni od potwierdzenia zlecenia. W sezonie warto rezerwować termin z kilkutygodniowym wyprzedzeniem." },
     { q: "Czy wystawiacie fakturę VAT?", a: "Tak, pracujemy zarówno z klientami prywatnymi, jak i firmami. Wystawiamy standardową fakturę VAT." },
-    { q: "Czy sprzątacie po zakończonych pracach?", a: "Zawsze zostawiamy plac uporządkowany — bez pryzm ziemi, luźnego gruzu czy zapomnianego sprzętu." },
-    { q: "Czy podpisujecie umowę na wykonanie?", a: "Przy większych zleceniach — tak. Standardem jest pisemne potwierdzenie zakresu, ceny i terminu przed rozpoczęciem prac." },
-    { q: "Czy pracujecie zimą?", a: "Przy sprzyjających warunkach i niezamarzniętym gruncie — tak. Zimą realizujemy też wyburzenia i drobniejsze prace." },
+    { q: "Czy sprzątacie po zakończonych pracach?", a: "Zawsze zostawiamy plac uporządkowany - bez pryzm ziemi, luźnego gruzu czy zapomnianego sprzętu." },
+    { q: "Czy podpisujecie umowę na wykonanie?", a: "Przy większych zleceniach - tak. Standardem jest pisemne potwierdzenie zakresu, ceny i terminu przed rozpoczęciem prac." },
+    { q: "Czy pracujecie zimą?", a: "Przy sprzyjających warunkach i niezamarzniętym gruncie - tak. Zimą realizujemy też wyburzenia i drobniejsze prace." },
 ];
 export const gallery = [
-    { src: realizacje1, alt: "Wykop pod fundamenty domu jednorodzinnego", tall: true },
-    { src: realizacje2, alt: "Podjazd z kostki granitowej" },
+    { src: realizacje1, alt: "Wyrównanie i utwardzenie działki", tall: true },
+    { src: realizacje2, alt: "Praca z młotem hydrauliczym" },
     { src: realizacje3, alt: "Wykop pod przyłącze wod-kan minikoparką" },
-    { src: realizacje4, alt: "Wyburzenie starego budynku" },
+    { src: realizacje4, alt: "Wyrównanie, posprzątanie i utwardzenie terenu" },
     { src: realizacje5, alt: "Wyrównanie i utwardzenie terenu" },
     { src: realizacje6, alt: "Wykop pod oczko wodne w ogrodzie" },
-    { src: realizacje7, alt: "Wykop pod oczko wodne w ogrodzie" },
-    { src: realizacje8, alt: "Wykop pod oczko wodne w ogrodzie" },
-    { src: realizacje9, alt: "Wykop pod oczko wodne w ogrodzie" },
+    { src: realizacje7, alt: "Wyrównanie terenu wokół domu" },
+    { src: realizacje8, alt: "Rozpoczęcie prac" },
+    { src: realizacje9, alt: "Wyrównanie terenu wokół domu" },
 ];
 export const steps = [
-    { n: "01", t: "Kontakt", d: "Dzwonisz lub piszesz — opowiadasz o zakresie." },
+    { n: "01", t: "Kontakt", d: "Dzwonisz lub piszesz - opowiadasz o zakresie." },
     { n: "02", t: "Bezpłatna wycena", d: "Przyjeżdżamy na miejsce i podajemy konkretną cenę." },
     { n: "03", t: "Ustalamy termin", d: "Rezerwujemy sprzęt i wpisujemy Cię w grafik." },
     { n: "04", t: "Wykonanie prac", d: "Pracujemy sprawnie, informujemy o postępach." },
@@ -72,8 +74,8 @@ export const testis = [
 export const whys = [
     { icon: Clock, t: "Terminowość", d: "Mówimy realne terminy i ich pilnujemy. Bez znikania z placu budowy." },
     { icon: Users, t: "Doświadczenie", d: "Od 2019 roku pracujemy dla klientów prywatnych i wykonawców. Ponad 300 zakończonych prac." },
-    { icon: Wrench, t: "Nowoczesny park maszynowy", d: "Serwisowany sprzęt do 2020 roku — mniej przestojów, więcej wykopu w ciągu dnia." },
-    { icon: Handshake, t: "Kompleksowa realizacja", d: "Wykopy, wywóz, brukarstwo, przyłącza — wszystko z jedną firmą, jedną fakturą." },
+    { icon: Wrench, t: "Nowoczesny park maszynowy", d: "Serwisowany sprzęt - mniej przestojów, więcej wykopu w ciągu dnia." },
+    { icon: Handshake, t: "Kompleksowa realizacja", d: "Wykopy, wywóz, brukarstwo, przyłącza - wszystko z jedną firmą, jedną fakturą." },
     { icon: Wallet, t: "Konkurencyjne ceny", d: "Wycena rozpisana pozycja po pozycji. Bez ukrytych kosztów pod koniec projektu." },
     { icon: Sparkles, t: "Indywidualne podejście", d: "Wchodzimy w projekt, dopytujemy, podpowiadamy tańsze rozwiązania. Ty decydujesz." },
 ];

@@ -5,7 +5,7 @@ import { contactFormSchema, type ContactFormValues } from "@/lib/validations/con
 import { sendContactForm } from "@/app/actions/contact/sendContactForm";
 import { Field } from "@/components/ui/Field";
 import { SectionLabel } from "@/components/ui/SectionLabel";
-import { EMAIL, PHONE, PHONE_HREF } from "@/data/content";
+import { contactParts } from "@/data/content";
 import { Clock, Mail, MapPin, Phone, Send } from "lucide-react";
 import { toast } from "sonner";
 import Link from "next/link";
@@ -18,7 +18,9 @@ export const Contact = () => {
         formState: { errors, isSubmitting },
         reset,
     } = useForm<ContactFormValues>({ resolver: zodResolver(contactFormSchema) });
-
+    const email = `${contactParts.emailUser}@${contactParts.emailDomain}`;
+    const phone = contactParts.phoneParts.join(" ");
+    const phoneHref = contactParts.phoneParts.join("");
 
     const onSubmit = async (data: ContactFormValues) => {
         const result = await sendContactForm(data);
@@ -52,10 +54,10 @@ export const Contact = () => {
                         <Reveal delay={0.15}>
                             <div className="mt-10 space-y-5">
                                 {[
-                                    { i: Phone, l: "Telefon", v: PHONE, h: PHONE_HREF },
-                                    { i: Mail, l: "E-mail", v: EMAIL, h: `mailto:${EMAIL}` },
+                                    { i: Phone, l: "Telefon", v: phone, h: phoneHref },
+                                    { i: Mail, l: "E-mail", v: email, h: `mailto:${email}` },
                                     { i: MapPin, l: "Baza", v: "Dziurów, woj. świętokrzyskie" },
-                                    { i: Clock, l: "Godziny", v: "Pon–Sob 7:00 – 19:00" },
+                                    { i: Clock, l: "Godziny", v: "Pon–Sob 7:00 – 18:00" },
                                 ].map(c => (
                                     <div key={c.l} className="flex items-start gap-4">
                                         <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0">
