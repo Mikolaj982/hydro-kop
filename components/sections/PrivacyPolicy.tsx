@@ -10,7 +10,7 @@ export const PrivacyPolicy = () => {
         <h1>Polityka prywatności</h1>
 
         <p className="text-sm text-gray-500">
-          Obowiązuje od: 27.07.2026 r.
+          Obowiązuje od: 01.08.2026 r.
         </p>
 
         <h2>1. Administrator danych osobowych</h2>
@@ -40,7 +40,7 @@ export const PrivacyPolicy = () => {
         <h2>2. Zakres przetwarzanych danych</h2>
 
         <p>
-          Za pośrednictwem formularza kontaktowego możemy przetwarzać:
+          Za pośrednictwem formularza kontaktowego przetwarzamy następujące dane osobowe:
         </p>
 
         <ul>
@@ -58,7 +58,7 @@ export const PrivacyPolicy = () => {
 
         <h2>3. Cel i podstawa przetwarzania danych</h2>
 
-        <p>Dane osobowe przetwarzane są w celu:</p>
+        <p>Dane osobowe są przetwarzane w następujących celach:</p>
 
         <ul>
           <li>udzielenia odpowiedzi na zapytanie,</li>
@@ -88,13 +88,16 @@ export const PrivacyPolicy = () => {
           <li>dostawcy usługi wysyłki wiadomości e-mail (Resend),</li>
           <li>podmiotom świadczącym usługi informatyczne.</li>
         </ul>
+
         <p>
-          Część odbiorców (w szczególności dostawca usługi wysyłki wiadomości e-mail Resend) może
-          przetwarzać dane poza Europejskim Obszarem Gospodarczym, w tym w Stanach Zjednoczonych.
-          W takich przypadkach przekazanie danych odbywa się na podstawie standardowych klauzul
-          umownych (Standard Contractual Clauses) zatwierdzonych przez Komisję Europejską,
-          zapewniających odpowiedni poziom ochrony danych.
+          W związku z korzystaniem z usługi wysyłki wiadomości e-mail Resend dane mogą
+          być przekazywane do państw spoza Europejskiego Obszaru Gospodarczego, w tym
+          do Stanów Zjednoczonych. W takich przypadkach przekazanie odbywa się na
+          podstawie standardowych klauzul umownych (Standard Contractual Clauses)
+          zatwierdzonych przez Komisję Europejską lub innych mechanizmów zapewniających
+          odpowiedni poziom ochrony danych zgodnie z przepisami RODO.
         </p>
+
         <p>
           Dane mogą zostać udostępnione również organom publicznym, jeżeli
           obowiązek taki wynika z przepisów prawa.
@@ -102,14 +105,16 @@ export const PrivacyPolicy = () => {
 
         <h2>5. Okres przechowywania danych</h2>
 
-        <p>Dane przechowywane są przez okres niezbędny do:</p>
+        <p>
+          Dane osobowe będą przechowywane przez okres niezbędny do prowadzenia
+          korespondencji i udzielenia odpowiedzi na przesłane zapytanie.
+        </p>
 
-        <ul>
-          <li>udzielenia odpowiedzi na zapytanie,</li>
-          <li>prowadzenia dalszej korespondencji,</li>
-          <li>dochodzenia lub obrony roszczeń,</li>
-          <li>realizacji obowiązków wynikających z przepisów prawa.</li>
-        </ul>
+        <p>
+          Po zakończeniu korespondencji dane mogą być przechowywane przez okres
+          niezbędny do dochodzenia lub obrony przed ewentualnymi roszczeniami, zgodnie
+          z obowiązującymi przepisami prawa.
+        </p>
 
         <h2>6. Prawa użytkownika</h2>
 
@@ -135,26 +140,51 @@ export const PrivacyPolicy = () => {
         </p>
 
         <h2>8. Pliki cookies</h2>
-
         <p>
-          Serwis wykorzystuje wyłącznie pliki cookies niezbędne do prawidłowego
-          działania strony.
+          Serwis wykorzystuje pliki cookies niezbędne do prawidłowego działania strony.
+          Nie służą one do profilowania użytkowników ani prowadzenia działań
+          marketingowych.
         </p>
 
         <p>
-          W przypadku wdrożenia narzędzi analitycznych lub marketingowych treść
-          niniejszej polityki zostanie odpowiednio zaktualizowana.
+          Na stronie została osadzona mapa OpenStreetMap. Korzystanie z mapy może
+          powodować nawiązywanie połączenia z serwerami OpenStreetMap Foundation, która
+          może przetwarzać dane techniczne użytkownika (np. adres IP) oraz
+          wykorzystywać własne pliki cookies zgodnie ze swoją polityką prywatności.
+        </p>
+
+        <p>
+          Więcej informacji znajduje się w{" "}
+          <a
+            href="https://osmfoundation.org/wiki/Privacy_Policy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Polityce Prywatności OpenStreetMap Foundation
+          </a>.
+        </p>
+
+        <p>
+          W przypadku wdrożenia narzędzi analitycznych lub marketingowych niniejsza
+          Polityka prywatności zostanie odpowiednio zaktualizowana.
         </p>
 
         <h2>9. Bezpieczeństwo danych</h2>
 
         <p>
           Administrator stosuje odpowiednie środki techniczne i organizacyjne
-          zapewniające ochronę danych osobowych przed ich utratą,
-          nieuprawnionym dostępem lub ujawnieniem.
+          mające na celu zapewnienie bezpieczeństwa danych osobowych oraz ochronę przed
+          ich utratą, nieuprawnionym dostępem, ujawnieniem lub zniszczeniem.
         </p>
 
-        <h2>10. Zmiany polityki prywatności</h2>
+        <h2>10. Zautomatyzowane podejmowanie decyzji</h2>
+
+        <p>
+          Dane osobowe nie są wykorzystywane do zautomatyzowanego podejmowania decyzji,
+          w tym profilowania, o którym mowa w art. 22 RODO.
+        </p>
+
+        <h2>11. Zmiany polityki prywatności</h2>
 
         <p>
           Administrator zastrzega sobie prawo do wprowadzania zmian w niniejszej
