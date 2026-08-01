@@ -97,7 +97,7 @@ export const Contact = () => {
                             >
                                 <h3 className="text-2xl font-display font-semibold">Bezpłatna wycena</h3>
                                 <p className="mt-2 text-sm text-white/50">
-                                    Opisz zakres w kilku zdaniach — oddzwonimy z konkretami.
+                                    Opisz zakres w kilku zdaniach - oddzwonimy z konkretami.
                                 </p>
 
                                 <div className="mt-8 grid sm:grid-cols-2 gap-4">

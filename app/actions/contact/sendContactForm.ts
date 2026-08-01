@@ -2,8 +2,10 @@
 
 import { Resend } from "resend";
 import { contactFormSchema, type ContactFormValues } from "@/lib/validations/contact";
+import { contactParts } from "@/data/content";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const CONTACT_EMAIL = `${contactParts.emailUser}@${contactParts.emailDomain}`;
 
 export async function sendContactForm(data: ContactFormValues) {
     const parsed = contactFormSchema.safeParse(data);
@@ -18,7 +20,7 @@ export async function sendContactForm(data: ContactFormValues) {
     }
     const { error } = await resend.emails.send({
         from: "onboarding@resend.dev",
-        to: "mikolaj982.hi@gmail.com",
+        to: CONTACT_EMAIL,
         replyTo: email || undefined,
         subject: `Nowe zapytanie o wycenę od ${name}`,
         text: `Imię i nazwisko: ${name}\nTelefon: ${phone}\nE-mail: ${email || "nie podano"}\nLokalizacja: ${loc || "nie podano"}\n\nZakres prac:\n${message}`,
