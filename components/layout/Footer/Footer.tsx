@@ -31,7 +31,7 @@ export const Footer = () => {
                 <div>
                     <p className="text-white text-sm font-semibold mb-4">Kontakt</p>
                     <ul className="space-y-2 text-sm">
-                        <li><a href={phoneHref} className="hover:text-yellow">{phone}</a></li>
+                        <li><a href={`tel:${phoneHref}`} className="hover:text-yellow">{phone}</a></li>
                         <li><a href={`mailto:${email}`} className="hover:text-yellow">{email}</a></li>
                         <li>Dziurów, świętokrzyskie</li>
                         <li>Pon–Sob 7:00 – 19:00</li>

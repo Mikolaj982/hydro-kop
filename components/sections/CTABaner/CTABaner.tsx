@@ -17,7 +17,7 @@ export const CtaBanner = () => {
                 </Reveal>
                 <Reveal delay={0.1}>
                     <div className="flex flex-wrap gap-3">
-                        <a href={phoneHref} className="inline-flex items-center gap-3 bg-ink text-white px-7 py-4 rounded-full font-semibold hover:bg-ink-soft transition-colors">
+                        <a href={`tel:${phoneHref}`} className="inline-flex items-center gap-3 bg-ink text-white px-7 py-4 rounded-full font-semibold hover:bg-ink-soft transition-colors">
                             <Phone className="w-5 h-5" /> {phone}
                         </a>
                         <a href="#kontakt" className="inline-flex items-center gap-3 bg-white text-ink px-7 py-4 rounded-full font-semibold hover:bg-cream transition-colors">

@@ -11,7 +11,7 @@ export const Hero = () => {
     const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
     const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
-    const phone = contactParts.phoneParts.join(" ");
+    const phoneHref = contactParts.phoneParts.join("");
 
     return (
         <section id="top" ref={ref} className="relative min-h-screen w-full overflow-hidden bg-ink text-white">
@@ -28,25 +28,25 @@ export const Hero = () => {
                 <div className="absolute inset-0 grid-lines opacity-40" />
             </motion.div>
 
-            <div className="relative z-10 container-x pt-40 pb-24 min-h-screen flex flex-col justify-between">
+            <div className="relative z-10 container-x pt-28 pb-24 min-h-screen flex flex-col justify-between">
                 <div className="max-w-4xl">
                     <Reveal>
                         <SectionLabel>Roboty ziemne · Świętokrzyskie</SectionLabel>
                     </Reveal>
                     <Reveal delay={0.1}>
-                        <h1 className="mt-6 text-white font-display font-semibold text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight">
+                        <h1 className="mt-6 text-white font-display font-semibold text-4xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight">
                             Kopiemy solidnie.<br />
                             Kończymy <span className="text-yellow">na czas.</span>
                         </h1>
                     </Reveal>
                     <Reveal delay={0.2}>
-                        <p className="mt-8 text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
-                            Od 2019 roku wykonujemy pełen zakres prac ziemnych: przyłącza wod-kan i gazowe, wykopy pod fundamenty, wyburzenia, korytowanie, utwardzanie terenu oraz roboty drogowe i brukarskie. Obsługujemy region starachowicki, kielecki i ostrowiecki — solidnie i terminowo, bez wymówek.
+                        <p className="mt-8 text-md md:text-xl text-white/70 max-w-2xl leading-relaxed">
+                            Od 2019 roku wykonujemy pełen zakres prac ziemnych: przyłącza wod-kan i gazowe, wykopy pod fundamenty, wyburzenia, korytowanie, utwardzanie terenu oraz roboty drogowe i brukarskie. Obsługujemy region starachowicki, kielecki i ostrowiecki - solidnie i terminowo, bez wymówek.
                         </p>
                     </Reveal>
                     <Reveal delay={0.3}>
                         <div className="mt-10 flex flex-wrap gap-3">
-                            <a href={phone} className="group inline-flex items-center gap-3 bg-yellow text-ink px-7 py-4 rounded-full font-semibold hover:bg-yellow-deep transition-all">
+                            <a href={`tel:${phoneHref}`} className="group inline-flex items-center gap-3 bg-yellow text-ink px-7 py-4 rounded-full font-semibold hover:bg-yellow-deep transition-all">
                                 <Phone className="w-5 h-5" /> Zadzwoń teraz
                             </a>
                             <a href="#kontakt" className="group inline-flex items-center gap-3 border border-white/20 text-white px-7 py-4 rounded-full font-semibold hover:bg-white hover:text-ink transition-all">

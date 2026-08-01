@@ -54,12 +54,13 @@ export const Contact = () => {
                         <Reveal delay={0.15}>
                             <div className="mt-10 space-y-5">
                                 {[
-                                    { i: Phone, l: "Telefon", v: phone, h: phoneHref },
+                                    { i: Phone, l: "Telefon", v: phone, h: `tel:${phoneHref}` },
                                     { i: Mail, l: "E-mail", v: email, h: `mailto:${email}` },
                                     { i: MapPin, l: "Baza", v: "Dziurów, woj. świętokrzyskie" },
                                     { i: Clock, l: "Godziny", v: "Pon–Sob 7:00 – 18:00" },
-                                ].map(c => (
-                                    <div key={c.l} className="flex items-start gap-4">
+                                ].map(c => {
+                                    console.log(c.l, c.h);
+                                    return (<div key={c.l} className="flex items-start gap-4">
                                         <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0">
                                             <c.i className="w-4 h-4 text-yellow" strokeWidth={1.75} />
                                         </div>
@@ -71,8 +72,8 @@ export const Contact = () => {
                                                 <p className="text-lg text-white">{c.v}</p>
                                             )}
                                         </div>
-                                    </div>
-                                ))}
+                                    </div>)
+                                })}
                             </div>
                         </Reveal>
 
