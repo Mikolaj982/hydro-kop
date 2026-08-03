@@ -1,6 +1,5 @@
 import { Contact } from "@/components/sections/Contact/Contact";
 import { CtaBanner } from "@/components/sections/CTABaner/CTABaner";
-import { Equipment } from "@/components/sections/Equipment/Equipment";
 import { Faq } from "@/components/sections/FAQ/Faq";
 import { Gallery } from "@/components/sections/Gallery/Gallery";
 import { Hero } from "@/components/sections/Hero/Hero";
@@ -15,7 +14,6 @@ export default function Home() {
     <main className="bg-background text-foreground">
       <Hero />
       <Services />
-      <Equipment />
       <Gallery />
       <Why />
       <Process />
