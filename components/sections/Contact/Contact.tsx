@@ -59,7 +59,6 @@ export const Contact = () => {
                                     { i: MapPin, l: "Baza", v: "Dziurów, woj. świętokrzyskie" },
                                     { i: Clock, l: "Godziny", v: "Pon–Sob 7:00 – 18:00" },
                                 ].map(c => {
-                                    console.log(c.l, c.h);
                                     return (<div key={c.l} className="flex items-start gap-4">
                                         <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0">
                                             <c.i className="w-4 h-4 text-yellow" strokeWidth={1.75} />
