@@ -12,14 +12,21 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
-    default: "Hydro-Kop | Roboty ziemne, wykopy i minikoparka | Świętokrzyskie",
+    default: "Hydro-kop - Usługi koparką i roboty ziemne",
     template: "%s | Hydro-Kop",
   },
 
   description:
-    "Hydro-Kop wykonuje roboty ziemne, wykopy pod fundamenty i instalacje, wyburzenia, brukarstwo oraz przyłącza wod-kan. Działamy na terenie województwa świętokrzyskiego. Bezpłatna wycena.",
+    "Hydro-kop wykonuje roboty ziemne, wykopy pod fundamenty i instalacje, wyburzenia, brukarstwo oraz przyłącza wod-kan, gaz. Działamy na terenie województwa świętokrzyskiego. Bezpłatna wycena.",
 
   keywords: [
+    "usługi koparką",
+    "koparka",
+    "roboty ziemne",
+    "wykopy",
+    "niwelacja terenu",
+    "HydroKop",
+    "hydrokop",
     "roboty ziemne",
     "wykopy",
     "minikoparka",
@@ -35,6 +42,8 @@ export const metadata: Metadata = {
     "Skarżysko-Kamienna",
     "Świętokrzyskie",
     "Hydro-Kop",
+    "Hydrokop-usługi",
+    "Hydrokop-uslugi"
   ],
 
   authors: [
@@ -66,17 +75,9 @@ export const metadata: Metadata = {
     locale: "pl_PL",
     url: SITE_URL,
     siteName: "Hydro-Kop",
-    title: "Hydro-Kop | Roboty ziemne i wykopy",
+    title: "Profesjonalne roboty ziemne i usługi koparką.",
     description:
       "Roboty ziemne, wykopy pod fundamenty, wyburzenia, brukarstwo oraz przyłącza wod-kan. Terminowe realizacje na terenie województwa świętokrzyskiego.",
-    images: [
-      {
-        url: "/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Hydro-Kop",
-      },
-    ],
   },
 
   twitter: {

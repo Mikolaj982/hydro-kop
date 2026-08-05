@@ -14,6 +14,9 @@ export const contactParts = {
     emailDomain: "interia.pl",
     phoneParts: ["+48", "534", "957", "028"]
 };
+
+export const FROM_EMAIL = "Hydro-kop <kontakt@xn--hydrokop-usugi-qnc.pl>";
+
 export const links = [
     ["Usługi", "#uslugi"],
     ["Sprzęt", "#sprzet"],
@@ -22,7 +25,7 @@ export const links = [
     ["FAQ", "#faq"],
     ["Kontakt", "#kontakt"],
 ];
-export const SITE_URL = "https://example.com";
+export const SITE_URL = "https://www.hydrokop-usługi.pl/";
 export const services = [
     { icon: PickaxeIcon, title: "Roboty ziemne", desc: "Kompleksowe prace ziemne, niwelacje i przygotowanie działek pod inwestycje." },
     { icon: Hammer, title: "Wyburzenia i rozbiórki", desc: "Rozbiórka budynków gospodarczych, stodół i obiektów murowanych z wywozem gruzu." },
