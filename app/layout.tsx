@@ -94,8 +94,8 @@ const localBusinessSchema = {
   name: "Hydro-Kop",
   url: SITE_URL,
   telephone: phoneNumber,
-  logo: `${SITE_URL}/logoHK.png`,
-  image: `${SITE_URL}/logoHK.png`,
+  logo: `${SITE_URL}/images/logoHK.png`,
+  image: `${SITE_URL}/images/logoHK.png`,
 
   description:
     "Hydro-Kop wykonuje usługi koparką, roboty ziemne, wykopy pod fundamenty, wyburzenia i rozbiórki, brukarstwo, przyłącza wod-kan i gazowe oraz transport materiałów.",
