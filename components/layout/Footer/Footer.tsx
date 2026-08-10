@@ -23,7 +23,7 @@ export const Footer = () => {
                 <div>
                     <p className="text-white text-sm font-semibold mb-4">Nawigacja</p>
                     <ul className="space-y-2 text-sm">
-                        {[["Usługi", "#uslugi"], ["Sprzęt", "#sprzet"], ["Realizacje", "#realizacje"], ["FAQ", "#faq"], ["Kontakt", "#kontakt"]].map(([l, h]) => (
+                        {[["Usługi", "#uslugi"], ["Realizacje", "#realizacje"], ["FAQ", "#faq"], ["Kontakt", "#kontakt"]].map(([l, h]) => (
                             <li key={h}><a href={h} className="hover:text-yellow transition-colors">{l}</a></li>
                         ))}
                     </ul>
