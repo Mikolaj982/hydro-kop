@@ -13,7 +13,7 @@ export const Process = () => {
           </Reveal>
           <Reveal delay={0.05}>
             <h2 className="mt-6 text-4xl md:text-6xl font-display font-semibold leading-[1.02]">
-              Pięć kroków od telefonu do gotowej pracy.
+              Jak realizujemy roboty ziemne i usługi koparką?
             </h2>
           </Reveal>
         </div>

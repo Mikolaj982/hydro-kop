@@ -12,17 +12,19 @@ export const Services = () => {
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
                     <div className="max-w-2xl">
                         <Reveal>
-                            <SectionLabel>Usługi</SectionLabel>
+                            <SectionLabel>
+                                <h2>Zakres usług</h2>
+                            </SectionLabel>
                         </Reveal>
                         <Reveal delay={0.05}>
-                            <h2 className="mt-6 text-4xl md:text-6xl font-display font-semibold leading-[1.02] tracking-tight">
+                            <p className="mt-6 text-4xl md:text-6xl font-display font-semibold leading-[1.02] tracking-tight">
                                 Wszystko, co potrzebne pod <span className="yellow-underline">budowę</span> i wokół niej.
-                            </h2>
+                            </p>
                         </Reveal>
                     </div>
                     <Reveal delay={0.1}>
                         <p className="text-muted-foreground max-w-md">
-                            Od pierwszego wjazdu koparki po ostatnią kostkę brukową — zajmujemy się całą pracą, żebyś nie musiał koordynować kilku ekip.
+                            Od pierwszego wjazdu koparki po ostatnią kostkę brukową - zajmujemy się całą pracą, żebyś nie musiał koordynować kilku ekip.
                         </p>
                     </Reveal>
                 </div>

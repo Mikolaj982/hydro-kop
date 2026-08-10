@@ -2,17 +2,18 @@ import type { Metadata } from "next";
 import { Figtree, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { SITE_URL } from "@/data/content";
+import { SITE_URL, contactParts } from "@/data/content";
 import { Toaster } from "sonner";
 
 const figtree = Figtree({ subsets: ["latin", "latin-ext"], variable: "--font-sans" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin", "latin-ext"], variable: "--font-display" });
+const phoneNumber = contactParts.phoneParts.join("");
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
-    default: "Hydro-kop - Usługi koparką i roboty ziemne",
+    default: "Hydro-Kop - Usługi koparką i roboty ziemne",
     template: "%s | Hydro-Kop",
   },
 
@@ -21,29 +22,16 @@ export const metadata: Metadata = {
 
   keywords: [
     "usługi koparką",
-    "koparka",
     "roboty ziemne",
     "wykopy",
-    "niwelacja terenu",
-    "HydroKop",
-    "hydrokop",
-    "roboty ziemne",
-    "wykopy",
-    "minikoparka",
     "wyburzenia",
-    "rozbiórki",
+    "minikoparka",
     "brukarstwo",
     "przyłącza wod-kan",
-    "wykopy pod fundamenty",
-    "transport kruszywa",
     "Starachowice",
     "Kielce",
     "Ostrowiec Świętokrzyski",
     "Skarżysko-Kamienna",
-    "Świętokrzyskie",
-    "Hydro-Kop",
-    "Hydrokop-usługi",
-    "Hydrokop-uslugi"
   ],
 
   authors: [
@@ -81,11 +69,10 @@ export const metadata: Metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Hydro-Kop | Roboty ziemne",
     description:
       "Wykopy, wyburzenia, brukarstwo i przyłącza wod-kan w województwie świętokrzyskim.",
-    images: ["/opengraph-image.png"],
   },
 
   alternates: {
@@ -95,8 +82,43 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    apple: "/favicon.ico",
   },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": `${SITE_URL}#business`,
+
+  name: "Hydro-Kop",
+  url: SITE_URL,
+  telephone: phoneNumber,
+  logo: `${SITE_URL}/logoHK.png`,
+  image: `${SITE_URL}/logoHK.png`,
+
+  description:
+    "Hydro-Kop wykonuje usługi koparką, roboty ziemne, wykopy pod fundamenty, wyburzenia i rozbiórki, brukarstwo, przyłącza wod-kan i gazowe oraz transport materiałów.",
+
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Słoneczna 48",
+    postalCode: "27-230",
+    addressLocality: "Dziurów",
+    addressCountry: "PL",
+  },
+
+  areaServed: [
+    "Starachowice",
+    "Adamów",
+    "Kuczów",
+    "Lubienia",
+    "Wąchock",
+    "Dziurów",
+    "Brody",
+    "Ostrowiec Świętokrzyski",
+    "Skarżysko-Kamienna",
+  ],
 };
 
 export default function RootLayout({
@@ -108,6 +130,12 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", "font-sans", figtree.variable, spaceGrotesk.variable)}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
         {children}
         <Toaster richColors />
       </body>

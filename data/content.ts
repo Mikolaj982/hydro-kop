@@ -25,12 +25,12 @@ export const links = [
     ["FAQ", "#faq"],
     ["Kontakt", "#kontakt"],
 ];
-export const SITE_URL = "https://www.hydrokop-usługi.pl/";
+export const SITE_URL = "https://hydrokop-usługi.pl";
 export const services = [
-    { icon: PickaxeIcon, title: "Roboty ziemne", desc: "Kompleksowe prace ziemne, niwelacje i przygotowanie działek pod inwestycje." },
+    { icon: PickaxeIcon, title: "Roboty ziemne", desc: "Kompleksowe roboty ziemne obejmujące niwelację terenu, przygotowanie działek oraz prace ziemne pod budowę." },
     { icon: Hammer, title: "Wyburzenia i rozbiórki", desc: "Rozbiórka budynków gospodarczych, stodół i obiektów murowanych z wywozem gruzu." },
-    { icon: Grid3x3, title: "Wykopy pod fundamenty", desc: "Precyzyjne wykopy pod ławy, płyty i piwnice - zgodnie z projektem." },
-    { icon: Waves, title: "Przyłącza wod-kan, gaz", desc: "Wykopy pod wodę, kanalizację, drenaże i szamba. Rzetelnie i szczelnie." },
+    { icon: Grid3x3, title: "Wykopy pod fundamenty", desc: "Wykonujemy wykopy pod ławy fundamentowe, płyty i piwnice, przygotowując teren zgodnie z dokumentacją projektową." },
+    { icon: Waves, title: "Przyłącza wod-kan, gaz", desc: "Wykonujemy wykopy pod przyłącza wodociągowe, kanalizacyjne i gazowe, a także pod drenaże oraz szamba." },
     { icon: Package, title: "Brukarstwo", desc: "Podjazdy, tarasy i alejki z kostki brukowej oraz granitowej." },
     { icon: Truck, title: "Transport materiałów", desc: "Dostawa kruszyw, piasku, ziemi oraz wywóz gruzu i urobku." },
 ];
