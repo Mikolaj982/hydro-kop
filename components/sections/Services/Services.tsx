@@ -1,7 +1,7 @@
 'use client'
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ArrowUpRight } from "lucide-react";
-import { services } from "@/data/content";
+import { services, serviceCoverage } from "@/data/content";
 import { Reveal } from "@/components/animations/Reveal";
 import { motion } from "motion/react";
 
@@ -54,6 +54,12 @@ export const Services = () => {
                         </Reveal>
                     ))}
                 </div>
+
+                <Reveal delay={0.15}>
+                    <p className="mt-12 text-sm text-muted-foreground max-w-3xl">
+                        {serviceCoverage}
+                    </p>
+                </Reveal>
             </div>
         </section>
     );

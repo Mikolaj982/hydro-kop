@@ -27,13 +27,14 @@ export const links = [
 ];
 export const SITE_URL = "https://hydrokop-usługi.pl";
 export const services = [
-    { icon: PickaxeIcon, title: "Roboty ziemne", desc: "Kompleksowe roboty ziemne obejmujące niwelację terenu, przygotowanie działek oraz prace ziemne pod budowę." },
-    { icon: Hammer, title: "Wyburzenia i rozbiórki", desc: "Rozbiórka budynków gospodarczych, stodół i obiektów murowanych z wywozem gruzu." },
-    { icon: Grid3x3, title: "Wykopy pod fundamenty", desc: "Wykonujemy wykopy pod ławy fundamentowe, płyty i piwnice, przygotowując teren zgodnie z dokumentacją projektową." },
-    { icon: Waves, title: "Przyłącza wod-kan, gaz", desc: "Wykonujemy wykopy pod przyłącza wodociągowe, kanalizacyjne i gazowe, a także pod drenaże oraz szamba." },
-    { icon: Package, title: "Brukarstwo", desc: "Podjazdy, tarasy i alejki z kostki brukowej oraz granitowej." },
-    { icon: Truck, title: "Transport materiałów", desc: "Dostawa kruszyw, piasku, ziemi oraz wywóz gruzu i urobku." },
+    { icon: PickaxeIcon, title: "Roboty ziemne", desc: "Kompleksowe roboty ziemne w Starachowicach i regionie: niwelacja terenu, przygotowanie działek oraz prace ziemne koparką i minikoparką pod budowę." },
+    { icon: Hammer, title: "Wyburzenia i rozbiórki", desc: "Rozbiórki obiektów budowlanych, wyburzenia stodół, budynków gospodarczych i murowanych z wywozem gruzu - Kielce, Starachowice i okolice." },
+    { icon: Grid3x3, title: "Wykopy pod fundamenty", desc: "Wykonujemy wykopy pod ławy fundamentowe, płyty i piwnice, przygotowując teren zgodnie z dokumentacją projektową i wytycznymi kierownika budowy." },
+    { icon: Waves, title: "Przyłącza wod-kan, gaz", desc: "Wykopy pod przyłącza wodociągowe, kanalizacyjne i gazowe, a także pod drenaże oraz szamba - realizacje w Ostrowcu Świętokrzyskim i regionie." },
+    { icon: Package, title: "Brukarstwo", desc: "Podjazdy, tarasy i alejki z kostki brukowej oraz granitowej - Skarżysko-Kamienna, Starachowice i okolice." },
+    { icon: Truck, title: "Transport materiałów", desc: "Dostawa kruszyw, piasku i ziemi oraz wywóz gruzu i urobku wywrotką na terenie województwa świętokrzyskiego." },
 ];
+export const serviceCoverage = "Realizujemy roboty ziemne w Starachowicach, wyburzenia i rozbiórki w Kielcach, przyłącza wod-kan i gazowe w Ostrowcu Świętokrzyskim oraz brukarstwo w Skarżysku-Kamiennej. Obsługujemy też pozostałe gminy województwa świętokrzyskiego.";
 export const faqs = [
     { q: "Ile kosztują roboty ziemne?", a: "Wycena zależy od kubatury, dojazdu i typu gruntu. Przyjeżdżamy na miejsce, mierzymy zakres i podajemy konkretną kwotę - bez zaskoczeń w trakcie." },
     { q: "Czy wykonujecie wykopy pod fundamenty?", a: "Tak, to jedna z naszych podstawowych usług. Robimy wykopy pod ławy, płyty i piwnice, zgodnie z projektem i wytycznymi kierownika budowy." },

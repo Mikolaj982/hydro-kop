@@ -13,14 +13,20 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
-    default: "Hydro-Kop - Usługi koparką i roboty ziemne",
+    default: "Roboty ziemne i usługi koparką Starachowice | Hydro-Kop",
     template: "%s | Hydro-Kop",
   },
 
   description:
-    "Hydro-kop wykonuje roboty ziemne, wykopy pod fundamenty i instalacje, wyburzenia, brukarstwo oraz przyłącza wod-kan, gaz. Działamy na terenie województwa świętokrzyskiego. Bezpłatna wycena.",
+    "Hydro-Kop wykonuje roboty ziemne, usługi koparką i minikoparką w Starachowicach oraz regionie świętokrzyskim: wykopy pod fundamenty, wyburzenia i rozbiórki, przyłącza wod-kan i gazowe, brukarstwo. Bezpłatna wycena.",
 
   keywords: [
+    "usługi koparką Starachowice",
+    "roboty ziemne Starachowice",
+    "wyburzenia Kielce",
+    "przyłącza wod-kan Ostrowiec Świętokrzyski",
+    "brukarstwo Skarżysko-Kamienna",
+    "minikoparka Starachowice",
     "usługi koparką",
     "roboty ziemne",
     "wykopy",
@@ -63,16 +69,16 @@ export const metadata: Metadata = {
     locale: "pl_PL",
     url: SITE_URL,
     siteName: "Hydro-Kop",
-    title: "Profesjonalne roboty ziemne i usługi koparką.",
+    title: "Roboty ziemne i usługi koparką - Starachowice",
     description:
-      "Roboty ziemne, wykopy pod fundamenty, wyburzenia, brukarstwo oraz przyłącza wod-kan. Terminowe realizacje na terenie województwa świętokrzyskiego.",
+      "Roboty ziemne, wykopy pod fundamenty, wyburzenia, brukarstwo oraz przyłącza wod-kan. Terminowe realizacje w Starachowicach i całym województwie świętokrzyskim.",
   },
 
   twitter: {
     card: "summary",
-    title: "Hydro-Kop | Roboty ziemne",
+    title: "Hydro-Kop | Roboty ziemne Starachowice",
     description:
-      "Wykopy, wyburzenia, brukarstwo i przyłącza wod-kan w województwie świętokrzyskim.",
+      "Wykopy, wyburzenia, brukarstwo i przyłącza wod-kan w Starachowicach i województwie świętokrzyskim.",
   },
 
   alternates: {
