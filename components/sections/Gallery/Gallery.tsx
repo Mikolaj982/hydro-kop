@@ -24,19 +24,19 @@ export const Gallery = () => {
                         </Reveal>
                     </div>
                     <Reveal delay={0.1}>
-                        <p className="text-muted-foreground max-w-sm">
-                            Krótki wybór z ponad trzystu prac wykonanych w regionie świętokrzyskim.
-                        </p>
+                        <h5 className="text-muted-foreground max-w-sm">
+                            Krótki wybór z ponad trzystu prac wykonanych w Starachowicach i okolicach.
+                        </h5>
                     </Reveal>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 auto-rows-[180px] md:auto-rows-[240px]">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 auto-rows-45 md:auto-rows-60 grid-flow-dense">
                     {gallery.map((g, i) => (
                         <Reveal key={i} delay={(i % 3) * 0.06}
                             className={`${i === 0 ? "row-span-2" : ""} ${i === 3 ? "row-span-2" : ""} ${i === 4 ? "col-span-2 md:col-span-1" : ""}`}>
                             <button onClick={() => setLb(i)} className="group relative w-full h-full overflow-hidden rounded-2xl bg-secondary block">
                                 <Image src={g.src} alt={g.alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                 <div className="absolute bottom-4 left-4 right-4 text-left text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity">
                                     {g.alt}
                                 </div>

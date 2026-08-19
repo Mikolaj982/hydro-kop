@@ -35,8 +35,8 @@ export const Hero = () => {
                         <SectionLabel>Roboty ziemne · Świętokrzyskie</SectionLabel>
                     </Reveal>
                     <h1 className="mt-6 text-white font-display font-semibold text-2xl sm:text-3xl md:text-6xl lg:text-7xl leading-[1.1] sm:leading-[0.95] tracking-tight">
-                        Usługi koparką i roboty ziemne<br />
-                        <span className="text-yellow">Starachowice</span> i woj. świętokrzyskie
+                        Roboty ziemne - Starachowice:<br />
+                        usługi <span className="text-yellow">koparką</span> i minikoparką
                     </h1>
                     <p className="mt-8 text-md md:text-xl text-white/70 max-w-2xl leading-relaxed">
                         Od 2019 roku wykonujemy pełen zakres prac ziemnych: przyłącza wod-kan i gazowe, wykopy pod fundamenty, wyburzenia, korytowanie, utwardzanie terenu oraz roboty drogowe i brukarskie. Starachowice i okolice - solidnie oraz terminowo, bez wymówek.

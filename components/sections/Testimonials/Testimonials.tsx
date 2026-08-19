@@ -25,7 +25,7 @@ export const Testimonials = () => {
                                 <p className="mt-4 text-lg leading-relaxed">{t.q}</p>
                                 <div className="mt-auto pt-8 border-t border-border/60">
                                     <p className="font-semibold">{t.n}</p>
-                                    <p className="text-sm text-muted-foreground">{t.r}</p>
+                                    <h5 className="text-sm text-muted-foreground">{t.r}</h5>
                                 </div>
                             </div>
                         </Reveal>

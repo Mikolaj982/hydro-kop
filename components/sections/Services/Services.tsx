@@ -39,7 +39,7 @@ export const Services = () => {
                                 className="group relative block h-full p-8 rounded-3xl border border-border bg-card overflow-hidden transition-colors hover:border-ink"
                             >
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-yellow/0 group-hover:bg-yellow/10 rounded-full blur-2xl transition-all duration-500" />
-                                <div className="relative flex flex-col h-full min-h-[280px]">
+                                <div className="relative flex flex-col h-full min-h-70">
                                     <div className="w-14 h-14 rounded-2xl bg-secondary group-hover:bg-yellow flex items-center justify-center transition-colors">
                                         <s.icon className="w-7 h-7" strokeWidth={1.75} />
                                     </div>
@@ -56,9 +56,9 @@ export const Services = () => {
                 </div>
 
                 <Reveal delay={0.15}>
-                    <p className="mt-12 text-sm text-muted-foreground max-w-3xl">
+                    <h5 className="mt-12 text-sm lg:text-2xl text-muted-foreground max-w-3xl">
                         {serviceCoverage}
-                    </p>
+                    </h5>
                 </Reveal>
             </div>
         </section>
