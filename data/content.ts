@@ -34,7 +34,7 @@ export const links = [
     ["FAQ", "#faq"],
     ["Kontakt", "#kontakt"],
 ];
-export const SITE_URL = "https://hydrokop-usługi.pl";
+export const SITE_URL = "https://www.hydrokop-usługi.pl";
 export const services = [
     { icon: PickaxeIcon, title: "Roboty ziemne", desc: "Kompleksowe roboty ziemne w Starachowicach i regionie: niwelacja terenu, przygotowanie działek oraz prace ziemne koparką i minikoparką pod budowę." },
     { icon: Hammer, title: "Wyburzenia i rozbiórki", desc: "Rozbiórki obiektów budowlanych, wyburzenia stodół, budynków gospodarczych i murowanych z wywozem gruzu - Starachowice i okolice." },
