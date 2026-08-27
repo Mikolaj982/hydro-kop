@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   },
 
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Hydro-Kop | Roboty ziemne Starachowice",
     description:
       "Wykopy, wyburzenia, brukarstwo i przyłącza wod-kan w Starachowicach i województwie świętokrzyskim.",
