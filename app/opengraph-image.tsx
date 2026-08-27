@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import sharp from "sharp";
 
-export const alt = "Hydro-Kop — roboty ziemne i usługi koparką, Starachowice";
+export const alt = "Hydro-Kop - roboty ziemne i usługi koparką, Starachowice";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
