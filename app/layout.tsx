@@ -114,6 +114,29 @@ const localBusinessSchema = {
     addressCountry: "PL",
   },
 
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 51.0149,
+    longitude: 21.1294,
+  },
+
+  sameAs: ["https://share.google/dZF3TRD8UBJzKbSqs"],
+
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "06:00",
+      closes: "18:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "06:00",
+      closes: "14:00",
+    },
+  ],
+
   areaServed: [
     "Starachowice",
     "Adamów",

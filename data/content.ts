@@ -89,9 +89,9 @@ export const stats = [
     { n: 24, s: "h", l: "Średni czas odpowiedzi" },
 ];
 export const testis = [
-    { q: "Wykop pod fundament domu zrobili w dwa dni, tak jak się umawialiśmy. Wjechali sprzętem tam, gdzie inna firma odmawiała.", n: "Marek K.", r: "Inwestor prywatny, Starachowice" },
-    { q: "Podjazd z kostki granitowej wygląda dokładnie tak, jak chciałem. Widać, że chłopaki robią to codziennie i wiedzą, co robią.", n: "Anna P.", r: "Klientka indywidualna, Starachowice" },
-    { q: "Rozbiórka stodoły z wywozem gruzu w jednym pakiecie. Zero mojego zaangażowania, tylko wskazałem co ma zniknąć.", n: "Tomasz L.", r: "Rolnik, powiat ostrowiecki" },
+    { q: "Polecam, dobrze wykonana robota, zgodnie z początkowymi ustaleniami. Zapłaciłem tyle na ile się umówiliśmy i jeszcze doradzili mi w innych tematach podczas budowy.", n: "Dawid", r: "Opinia z Google" },
+    { q: "Firma solidna godna polecenia. Prace wykonuje solidnie, czysto i sprawnie. Dotrzymują umówionych terminów. Polecam", n: "Wioletta", r: "Opinia z Google" },
+    { q: "Firma godna polecenia. Zarówno z przebiegu prac jak i efektu końcowego jestem bardzo zadowolony.", n: "Kacper", r: "Opinia z Google" },
 ];
 export const whys = [
     { icon: Clock, t: "Terminowość", d: "Mówimy realne terminy i ich pilnujemy. Bez znikania z placu budowy." },
