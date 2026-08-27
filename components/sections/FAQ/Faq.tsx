@@ -6,10 +6,27 @@ import { faqs } from "@/data/content";
 import { AnimatePresence, motion } from "motion/react";
 import { Reveal } from "@/components/animations/Reveal";
 
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: {
+            "@type": "Answer",
+            text: f.a,
+        },
+    })),
+};
+
 export const Faq = () => {
     const [open, setOpen] = useState<number | null>(0);
     return (
         <section id="faq" className="py-28 md:py-40 bg-cream">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
             <div className="container-x">
                 <div className="grid lg:grid-cols-12 gap-12">
                     <div className="lg:col-span-4">
